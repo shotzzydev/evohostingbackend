@@ -1,0 +1,39 @@
+<%- include('includes/head') %> 
+<%- include('includes/nav') %> 
+
+<div class="dashboard-container">
+    <div>
+        <ul class="dashboard-ul-user-infos">
+            <li>
+                <img class="dashboard-user-avatar" src="http://127.0.0.1:3000/img/20240430_010936.jpg">
+            </li>
+            <li>
+                <div>
+                    <ul>
+                        <li>Name: <%= user_name %></li>
+                        <li>ID: <%= user_id %></li>
+                        <li>Email: <%= user.email %></li>
+                        <li>GitHub: <%= user_github %></li>
+                    </ul>
+                </div>
+            </li>
+    
+            <li>
+                <div>
+                    <ul>
+                        <li>Plan: <%= user_plan_name %></li>
+                        <li>Memory: <%= user_plan_memory %></li>
+                        <li>Expired: <%= user_plan_expired %></li>
+                        <li><button><a href="/dashboard/upload">New App</a></button></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <input class="dashboard-search" type="text">
+
+    <%- include('includes/applications') %> 
+    
+</div>
+
+<%- include('includes/footer') %> 
